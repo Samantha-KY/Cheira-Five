@@ -2,6 +2,7 @@ import Link from "next/link";
 import Hero from "./components/Hero";
 import RoomCard from "./components/RoomCard";
 import { rooms, spaces } from "../lib/data";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -28,7 +29,9 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-6">
           {spaces.map((s) => (
             <div key={s.id} className="group bg-surface rounded-2xl shadow hover:shadow-lg transition p-4 border border-muted/60">
-              <img src={s.image} alt={s.name} className="rounded-xl mb-4 aspect-[4/3] object-cover w-full" />
+              <div className="relative rounded-xl mb-4 aspect-[4/3] overflow-hidden">
+                <Image src={s.image} alt={s.name} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
+              </div>
               <h4 className="text-lg font-semibold text-foreground">{s.name}</h4>
               <p className="text-foreground/70 text-sm">{s.description}</p>
             </div>

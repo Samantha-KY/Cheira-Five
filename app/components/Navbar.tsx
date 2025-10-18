@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -17,7 +18,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 bg-surface/80 backdrop-blur border-b border-muted/50">
       <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <img src="/logo.jpg" alt="Mini Hotel logo" className="h-8 w-8" />
+          <Image src="/logo.jpg" alt="Mini Hotel logo" width={32} height={32} className="h-8 w-8" />
           <span className="font-bold text-xl tracking-tight text-foreground">Cheira Five</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
