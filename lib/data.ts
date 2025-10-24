@@ -7,9 +7,9 @@ export type Room = {
 };
 
 export const rooms: Room[] = [
-  { id: 1, name: "Deluxe Room", price: "$120 / night", image: "/room.jpg", description: "Spacious room with city view." },
-  { id: 2, name: "Suite", price: "$200 / night", image: "/room.jpg", description: "Luxury suite with private balcony." },
-  { id: 3, name: "Standard Room", price: "$90 / night", image: "/room.jpg", description: "Cozy and comfortable for short stays." },
+  { id: 1, name: "Deluxe Room", price: "rwf... / night", image: "/room.jpg", description: "Spacious room with city view." },
+  { id: 2, name: "Suite", price: "rwf... / night", image: "/room.jpg", description: "Luxury suite with private balcony." },
+  { id: 3, name: "Standard Room", price: "rwf... / night", image: "/room.jpg", description: "Cozy and comfortable for short stays." },
 ];
 
 export const spaces = [

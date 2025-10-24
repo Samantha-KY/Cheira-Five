@@ -11,13 +11,13 @@ export default function BookingForm() {
     try {
       const res = await fetch("/api/book", {
         method: "POST",
-        body: JSON.stringify(Object.fromEntries(formData as any)),
+        body: JSON.stringify(Object.fromEntries(formData.entries())),
         headers: { "Content-Type": "application/json" },
       });
       const data = await res.json();
       if (res.ok) setResult("Booking request received. We'll confirm shortly.");
       else setResult(data.message || "Something went wrong.");
-    } catch (e) {
+    } catch {
       setResult("Network error. Please try again.");
     } finally {
       setLoading(false);

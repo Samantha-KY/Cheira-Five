@@ -12,7 +12,7 @@ export default function KitchenPage() {
         <div className="bg-surface p-6 rounded-2xl shadow border border-muted/60">
           <h3 className="font-semibold mb-2 text-foreground">Specialties</h3>
           <ul className="list-disc ml-5 text-sm text-foreground/80 space-y-1">
-            <li>Chef's tasting menu</li>
+            <li>Chef&apos;s tasting menu</li>
             <li>Local seafood</li>
             <li>Vegan and gluten-free options</li>
           </ul>
