@@ -15,7 +15,7 @@ export default function BookingForm() {
         headers: { "Content-Type": "application/json" },
       });
       const data = await res.json();
-      if (res.ok) setResult("Booking request received. We'll confirm shortly.");
+      if (res.ok) setResult("Booking pending. We'll confirm shortly.");
       else setResult(data.message || "Something went wrong.");
     } catch {
       setResult("Network error. Please try again.");
