@@ -33,14 +33,16 @@ export async function POST(req: Request) {
 
   try {
     await sendBookingEmail({
-      to: "mureraksamantha@gmail.com",
+      to: "cheirafive@gmail.com",
       from: process.env.SMTP_FROM || "no-reply@cheira-five.local",
       subject: "New Room Booking - Pending",
       html,
     });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("Email send error:", err);
-    const message = err?.message || "Failed to send notification email";
+    let message = "Failed to send notification email";
+    if (err instanceof Error) message = err.message;
+    else if (typeof err === "string") message = err;
     return NextResponse.json({ ok: false, message }, { status: 500 });
   }
 
